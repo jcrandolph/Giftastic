@@ -10,3 +10,7 @@ html {
     h1{
         text-align: center;
     }
+
+    .inherit{
+        background-color: transparent;
+    }

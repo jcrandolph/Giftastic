@@ -34,6 +34,7 @@ $(document).ready(function () {
                     let p = $("<p>").text("Rating: " + results[i].rating);
                     let gifImg = $("<img>");
                     gifImg.attr("src", results[i].images.fixed_height.url);
+                    gifImg.addClass("gif")
                     gifs.append(p);
                     gifs.append(gifImg);
                     $("#gifDiv").prepend(gifs);
@@ -49,9 +50,10 @@ $(document).ready(function () {
         renderButtons();
     });
     renderButtons();
+    //this is wrong
     //code to change gifs from animate to still and vice versa by click
     $(".gif").on("click", function () {
-        var state = $(this).attr("data-state");
+        let state = $(this).attr("data-state");
         if (state === "still") {
             $(this).attr("src", $(this).attr("data-animate"));
             $(this).attr("data-state", "animate");
